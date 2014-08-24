@@ -132,6 +132,39 @@
 			
 	\section{HM II}
 	
+			\subsection{Differentialrechnung}
+			
+			\subsubsection{Extrema}
+			
+			\begin{displaymath}
+			f: \mathbb{R}^n \to \mathbb{R}
+			\end{displaymath}
+			
+			\begin{enumerate}[]
+				\item Finden von potentiellen Extrema (notwendige Bedingung): \begin{math} grad \ f(x) = 0\end{math}
+				\item Definitheit von Matrizen A \begin{math} \in \mathbb{R}^{nxn} \end{math}
+				\begin{enumerate}[]
+					\item allgemein
+					\begin{enumerate}[]
+						\item A positiv definit \begin{math} \Leftrightarrow \end{math} alle Eigenwerte von A sind positiv
+						\item A negativ definit \begin{math} \Leftrightarrow \end{math} alle Eigenwerte von A sind negativ				
+						\item A indefinit \begin{math} \Leftrightarrow \end{math} A besitzt sowohl positive als auch negative Eigenwerte
+					\end{enumerate}
+					\item n = 2 
+					\begin{enumerate}[]
+						\item A positiv definit \begin{math} \Leftrightarrow \det A > 0 \wedge a_{11} > 0 \end{math}
+						\item A negativ definit \begin{math} \Leftrightarrow \det A > 0 \wedge a_{11} < 0 \end{math}
+						\item A indefinit \begin{math} \Leftrightarrow \det A < 0 \end{math}
+					\end{enumerate}
+				\end{enumerate}
+				\item Entscheidung von potentiellen Extrema über Definitheit der Hesse-Matrix
+				\begin{enumerate}[]
+					\item \begin{math} H_f(x_0) \end{math} ist positiv definit \begin{math} \implies \end{math}  lokales Minimum 
+					\item \begin{math} H_f(x_0) \end{math} ist negativ definit \begin{math} \implies \end{math}  lokales Maximum
+					\item \begin{math} H_f(x_0) \end{math} ist indefinit \begin{math} \implies \end{math}  kein lokales Extremum
+				\end{enumerate}
+			\end{enumerate}
+	
 		\subsection{Integration}
 		
 			\subsubsection{Substitution}
