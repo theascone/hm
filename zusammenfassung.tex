@@ -1,0 +1,282 @@
+\documentclass[]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+
+%opening
+\title{HM Zusammenfassung}
+
+\begin{document}
+
+	\maketitle
+	
+	\section{HM I}
+	
+		\subsection{Konvergenzkriterien für Reihen}
+			
+			\begin{displaymath}
+				S = \sum_{n=0}^{\infty} a_{n}
+			\end{displaymath}
+			
+			\subsubsection{Majorantenkriterium}
+			
+			\subsubsection{Minorantenkriterium}
+			
+			\subsubsection{Wurzelkriterium}
+				
+				\begin{displaymath} 
+					\alpha := \limsup\limits_{n \to \infty} \sqrt[n]{|a_{n}|}
+				\end{displaymath}
+				
+				\begin{enumerate}[]
+					\item
+						\begin{math} \alpha < 1 \implies \end{math} Reihe absolut konvergent
+					\item
+						\begin{math} \alpha > 1 \implies \end{math} Reihe divergent
+				\end{enumerate}
+				
+			\subsubsection{Quotientenkriterium}
+			
+				\begin{displaymath}
+					\alpha_n = |\frac{a_{n+1}}{a_{n}}|
+				\end{displaymath}
+				
+				\begin{enumerate}[]
+					\item
+						\begin{math} \alpha_n \leq q < 1 \end{math} für fast alle \begin{math} n \in \mathbb{N} \implies \end{math} Reihe absolut konvergent
+					\item
+						\begin{math} \alpha_n \geq 1\end{math} für fast alle \begin{math} n \in \mathbb{N} \implies \end{math} Reihe divergent
+				\end{enumerate}
+	
+		\subsection{Konvergenzradius von Potenzreihen}
+		
+			\begin{displaymath}
+				P(x) = \sum_{n=0}^{\infty} a_{n}(x-x_0)^n
+			\end{displaymath}
+			
+			\subsubsection{Wurzelkriterium}
+			
+				\begin{displaymath}
+					r = \frac{1}{\limsup\limits_{n \to \infty} \sqrt[n]{|a_{n}|}}
+				\end{displaymath}
+				
+			\subsubsection{Quotientenkriterium}
+			
+				\begin{displaymath}
+					r = \lim\limits_{n \to \infty} |\frac{a_{n}}{a_{n+1}}|
+				\end{displaymath}
+		
+		\subsection{Mittelwertsatz für Differentialgleichungen}
+		
+			\begin{math} f: [a,b] \to \mathbb{R} \end{math} stetig auf \begin{math} [a,b] \end{math} und differenzierbar auf \begin{math} (a,b) \end{math}:
+			
+			\begin{displaymath}
+				\exists x \in (a,b):f'(x) = \frac{f(b) - f(a)}{b - a}
+			\end{displaymath}
+	
+		\subsection{Partielle Integration}
+			\begin{math} f, g: [a, b] \to \mathbb{R} \end{math} stetig differenzierbar auf \begin{math} (a,b) \end{math}:
+			
+			\begin{displaymath}
+				\int_{a}^{b} f'(x) \cdot g(x) dx = [f(x) \cdot g(x)]_{a}^{b} - \int_{a}^{b} f(x) \cdot g'(x) dx
+			\end{displaymath}
+		
+		\subsection{Fourierreihe}
+		
+			\begin{displaymath}
+				\frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx) + b_n \sin(nx)
+			\end{displaymath}
+			
+			\begin{enumerate}[]
+				
+			\item \begin{displaymath}
+				a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(kx) dx, k \in \mathbb{N}_0
+			\end{displaymath}
+		
+			\item \begin{displaymath}
+				b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(kx) dx, k \in \mathbb{N}
+			\end{displaymath}
+			
+			\end{enumerate}
+			
+			\subsubsection{Spezialfälle}
+				
+				\begin{enumerate}[]
+				
+					\item \begin{math} f \end{math} gerade (\begin{math} :\Leftrightarrow \forall x \in \mathbb{R}: f(x) = f(-x) \end{math}):
+					
+						\begin{displaymath}
+							a_k = \frac{2}{\pi} \int_{0}^{\pi} f(x) \cos(kx) dx, k \in \mathbb{N}_0
+						\end{displaymath}
+					
+						\begin{displaymath}
+							b_k = 0
+						\end{displaymath}
+					
+					\item \begin{math} f \end{math} ungerade (\begin{math} :\Leftrightarrow \forall x \in \mathbb{R}: f(x) = -f(-x) \end{math}):
+					
+						\begin{displaymath}
+							a_k = 0
+						\end{displaymath}
+						
+						\begin{displaymath}
+							b_k = \frac{2}{\pi} \int_{0}^{\pi} f(x) \sin(kx) dx, k \in \mathbb{N}_0
+						\end{displaymath}
+						
+									
+				\end{enumerate}
+	
+	\clearpage
+			
+	\section{HM II}
+	
+		\subsection{Integration}
+		
+			\subsubsection{Substitution}
+			
+				\begin{displaymath}
+					\int_{g(B)} f(x) dx = \int_{B} f(g(z)) \cdot |\det g'(z)| dz
+				\end{displaymath}
+			
+				\begin{enumerate}[1.]
+					\item Polarkoordinaten
+						
+						\begin{math} r \in [0, \infty), \phi \in [0, 2\pi) \end{math}
+						
+						\begin{math} r := \sqrt{x^2 + y^2} = ||(x,y)|| \end{math}
+						
+						\begin{math} x = r \cos \phi \end{math},
+						\begin{math} y = r \sin \phi \end{math}
+						
+						\begin{math} \det g'(r, \phi) = r \end{math}
+							
+					\item Zylinderkoordinaten
+						
+						\begin{math} r \in [0, \infty), \phi \in [0, 2\pi) \end{math}
+						
+						\begin{math} r := \sqrt{x^2 + y^2} = ||(x,y)|| \end{math}
+						
+						\begin{math} x = r \cos \phi \end{math},
+						\begin{math} y = r \sin \phi \end{math},
+						\begin{math} z = z \end{math}
+						
+						\begin{math} \det g'(r, \phi, z) = r \end{math}
+					
+					\item Kugelkoordinaten
+					
+						\begin{math} r \in [0, \infty), \phi \in [0, 2\pi), \theta \in (- \frac{\pi}{2}, \frac{\pi}{2}) \end{math}
+					
+						\begin{math} r := \sqrt{x^2 + y^2 + z^2} = ||(x,y,z)|| \end{math}
+					
+						\begin{math} x = r \cos \phi \cos \theta \end{math},
+						\begin{math} y = r \sin \phi \cos \theta \end{math},
+						\begin{math} z = r \sin \theta \end{math}
+						
+						\begin{math} \det g'(r, \phi, \theta) = r^2 \cos \theta \end{math}
+				\end{enumerate}
+	
+		\subsection{Differentialgleichungen}
+	
+			\subsubsection{Differentialgleichung mit getrennten Veränderlichen}
+			
+				\begin{displaymath}
+					y' = f(x) \cdot g(y)
+				\end{displaymath}
+		
+				Lösung durch Auflösen nach y:
+		
+				\begin{displaymath}
+					\int \frac{1}{g(y)} dy = \int f(x) dx +c
+				\end{displaymath}
+		
+			\subsubsection{Lineare Differentialgleichungen 1. Ordnung}
+				
+				\begin{displaymath}
+					y' = \alpha(x)y + s(x)
+				\end{displaymath}
+				
+				Sei \begin{math} \beta'(x) = \alpha(x) \end{math}.
+				
+				Homogene Lösung:
+						
+				\begin{displaymath}
+					y_h(x) = Ce^{\beta(x)}
+				\end{displaymath}
+				
+				Inhomogene Lösung:
+				
+				\begin{displaymath}
+					y_p(x) = Ce^{\beta(x)} + e^{\beta(x)} \int_{}^{x} e^{-\beta(t)} s(t) dt
+				\end{displaymath}
+				
+			\subsubsection{Lineare Differentialgleichungen n-ter Ordnung mit konstanten Koeffizienten}
+			
+				\begin{displaymath}
+					y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 y' + a_0 y = b
+				\end{displaymath}
+				
+				\begin{enumerate}[1.]
+					\item Charakteristisches Polynom aufstellen
+					
+						\begin{math}
+							p(\lambda) = (-1)^n [\lambda^n + a_{n-1} \lambda^{n-1} + \dots + a_1 \lambda + a_0]
+						\end{math}
+					
+					\item Nullstellen des Charakteristischen Polynoms bestimmen
+					
+						\begin{math}
+							p(\lambda) = (-1)^n (\lambda - \lambda_1)^{k_1} \dots (\lambda - \lambda_r)^{k_r}
+						\end{math}
+						
+						Zu beachten:
+						
+						\begin{enumerate}[]
+
+						\item \begin{math} \lambda_1, \dots, \lambda_m \in \mathbb{R}; \lambda_{m+1}, \dots, \lambda_r \in \mathbb{C} \setminus \mathbb{R} \end{math}
+						
+						\item \begin{math} \lambda_{m+1} = \mu_1, \dots, \lambda_{m+s} = \mu_s \end{math}
+						
+						\item \begin{math} \lambda_{m+s+1} = \overline{\mu_1}, \dots, \lambda_{m+2s} = \overline{\mu_s} \end{math}
+						
+						\end{enumerate}
+						
+					\item Reelle Beiträge zum Fundamentalsystem
+					
+						\begin{math}
+							j \in \{ 1, \dots, m\}
+						\end{math}
+						
+						\begin{math}
+							e^{\lambda_j x}, x e^{\lambda_j x}, \dots, x^{k_{j-1}} e^{\lambda_j x}
+						\end{math}
+						
+					\item Komplexe Beträge zum Fundamentalsystem
+					
+						\begin{math}
+							j \in \{ m+1, \dots, m+s\}
+						\end{math}
+						
+						\begin{math}
+							\lambda_j = \alpha_j + i \beta_j, (\alpha_j, \beta_j \in \mathbb{R}, \beta_j \neq 0)
+						\end{math}
+						
+						\begin{math}
+							e^{\alpha_jx} \cos (\beta_jx), x e^{\alpha_jx} \cos (\beta_jx), \dots, x^{k_{j-1}} e^{\alpha_jx} \cos (\beta_jx)
+						\end{math}
+						
+						\begin{math}
+							e^{\alpha_jx} \sin (\beta_jx), x e^{\alpha_jx} \sin (\beta_jx), \dots, x^{k_{j-1}} e^{\alpha_jx} \sin (\beta_jx)
+						\end{math}
+						
+					\item Alle Reellen und komplexen Beiträge mit jeweils hinzu multiplizierten Konstanten \begin{math} c_j \end{math} bilden als Summe das Fundamentalsystem und damit die allgemeine Lösung als homogene Gleichung.
+					
+					\item Die spezielle Lösung der inhomogenen Gleichung erhält man durch Variation der Konstanten.
+				\end{enumerate}
+				
+			
+				
+		\subsection{Fouriertransformation}
+			
+\end{document}
