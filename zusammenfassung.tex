@@ -31,10 +31,8 @@
 				\end{displaymath}
 				
 				\begin{enumerate}[]
-					\item
-						\begin{math} \alpha < 1 \implies \end{math} Reihe absolut konvergent
-					\item
-						\begin{math} \alpha > 1 \implies \end{math} Reihe divergent
+					\item \begin{math} \alpha < 1 \implies \end{math} Reihe absolut konvergent
+					\item \begin{math} \alpha > 1 \implies \end{math} Reihe divergent
 				\end{enumerate}
 				
 			\subsubsection{Quotientenkriterium}
@@ -44,10 +42,8 @@
 				\end{displaymath}
 				
 				\begin{enumerate}[]
-					\item
-						\begin{math} \alpha_n \leq q < 1 \end{math} für fast alle \begin{math} n \in \mathbb{N} \implies \end{math} Reihe absolut konvergent
-					\item
-						\begin{math} \alpha_n \geq 1\end{math} für fast alle \begin{math} n \in \mathbb{N} \implies \end{math} Reihe divergent
+					\item \begin{math} \alpha_n \leq q < 1 \end{math} für fast alle \begin{math} n \in \mathbb{N} \implies \end{math} Reihe absolut konvergent
+					\item \begin{math} \alpha_n \geq 1\end{math} für fast alle \begin{math} n \in \mathbb{N} \implies \end{math} Reihe divergent
 				\end{enumerate}
 	
 		\subsection{Konvergenzradius von Potenzreihen}
@@ -91,13 +87,15 @@
 			
 			\begin{enumerate}[]
 				
-			\item \begin{displaymath}
-				a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(kx) dx, k \in \mathbb{N}_0
-			\end{displaymath}
-		
-			\item \begin{displaymath}
-				b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(kx) dx, k \in \mathbb{N}
-			\end{displaymath}
+				\item 
+					\begin{displaymath}
+						a_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(kx) dx, k \in \mathbb{N}_0
+					\end{displaymath}
+			
+				\item
+					\begin{displaymath}
+						b_k = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(kx) dx, k \in \mathbb{N}
+					\end{displaymath}
 			
 			\end{enumerate}
 			
@@ -135,35 +133,35 @@
 		\subsection{Differentialrechnung}
 			
 			\subsubsection{Extrema}
-			
-			\begin{displaymath}
-			f: \mathbb{R}^n \to \mathbb{R}
-			\end{displaymath}
-			
-			\begin{enumerate}[]
-				\item Finden von potentiellen Extrema (notwendige Bedingung): \begin{math} grad \ f(x) = 0\end{math}
-				\item Definitheit von Matrizen A \begin{math} \in \mathbb{R}^{nxn} \end{math}
+				
+				\begin{displaymath}
+					f: \mathbb{R}^n \to \mathbb{R}
+				\end{displaymath}
+				
 				\begin{enumerate}[]
-					\item allgemein
-					\begin{enumerate}[]
-						\item A positiv definit \begin{math} \Leftrightarrow \end{math} alle Eigenwerte von A sind positiv
-						\item A negativ definit \begin{math} \Leftrightarrow \end{math} alle Eigenwerte von A sind negativ				
-						\item A indefinit \begin{math} \Leftrightarrow \end{math} A besitzt sowohl positive als auch negative Eigenwerte
-					\end{enumerate}
-					\item n = 2 
-					\begin{enumerate}[]
-						\item A positiv definit \begin{math} \Leftrightarrow \det A > 0 \wedge a_{11} > 0 \end{math}
-						\item A negativ definit \begin{math} \Leftrightarrow \det A > 0 \wedge a_{11} < 0 \end{math}
-						\item A indefinit \begin{math} \Leftrightarrow \det A < 0 \end{math}
-					\end{enumerate}
+					\item Finden von potentiellen Extrema (notwendige Bedingung): \begin{math} grad \ f(x) = 0\end{math}
+					\item Definitheit von Matrizen A \begin{math} \in \mathbb{R}^{nxn} \end{math}
+						\begin{enumerate}[]
+							\item allgemein
+								\begin{enumerate}[]
+									\item A positiv definit \begin{math} \Leftrightarrow \end{math} alle Eigenwerte von A sind positiv
+									\item A negativ definit \begin{math} \Leftrightarrow \end{math} alle Eigenwerte von A sind negativ				
+									\item A indefinit \begin{math} \Leftrightarrow \end{math} A besitzt sowohl positive als auch negative Eigenwerte
+								\end{enumerate}
+							\item n = 2 
+								\begin{enumerate}[]
+									\item A positiv definit \begin{math} \Leftrightarrow \det A > 0 \wedge a_{11} > 0 \end{math}
+									\item A negativ definit \begin{math} \Leftrightarrow \det A > 0 \wedge a_{11} < 0 \end{math}
+									\item A indefinit \begin{math} \Leftrightarrow \det A < 0 \end{math}
+								\end{enumerate}
+						\end{enumerate}
+					\item Entscheidung von potentiellen Extrema über Definitheit der Hesse-Matrix
+						\begin{enumerate}[]
+							\item \begin{math} H_f(x_0) \end{math} ist positiv definit \begin{math} \implies \end{math}  lokales Minimum 
+							\item \begin{math} H_f(x_0) \end{math} ist negativ definit \begin{math} \implies \end{math}  lokales Maximum
+							\item \begin{math} H_f(x_0) \end{math} ist indefinit \begin{math} \implies \end{math}  kein lokales Extremum
+						\end{enumerate}
 				\end{enumerate}
-				\item Entscheidung von potentiellen Extrema über Definitheit der Hesse-Matrix
-				\begin{enumerate}[]
-					\item \begin{math} H_f(x_0) \end{math} ist positiv definit \begin{math} \implies \end{math}  lokales Minimum 
-					\item \begin{math} H_f(x_0) \end{math} ist negativ definit \begin{math} \implies \end{math}  lokales Maximum
-					\item \begin{math} H_f(x_0) \end{math} ist indefinit \begin{math} \implies \end{math}  kein lokales Extremum
-				\end{enumerate}
-			\end{enumerate}
 	
 		\subsection{Integration}
 		
@@ -266,12 +264,12 @@
 						Zu beachten:
 						
 						\begin{enumerate}[]
-
-						\item \begin{math} \lambda_1, \dots, \lambda_m \in \mathbb{R}; \lambda_{m+1}, \dots, \lambda_r \in \mathbb{C} \setminus \mathbb{R} \end{math}
-						
-						\item \begin{math} \lambda_{m+1} = \mu_1, \dots, \lambda_{m+s} = \mu_s \end{math}
-						
-						\item \begin{math} \lambda_{m+s+1} = \overline{\mu_1}, \dots, \lambda_{m+2s} = \overline{\mu_s} \end{math}
+	
+							\item \begin{math} \lambda_1, \dots, \lambda_m \in \mathbb{R}; \lambda_{m+1}, \dots, \lambda_r \in \mathbb{C} \setminus \mathbb{R} \end{math}
+							
+							\item \begin{math} \lambda_{m+1} = \mu_1, \dots, \lambda_{m+s} = \mu_s \end{math}
+							
+							\item \begin{math} \lambda_{m+s+1} = \overline{\mu_1}, \dots, \lambda_{m+2s} = \overline{\mu_s} \end{math}
 						
 						\end{enumerate}
 						
