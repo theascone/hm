@@ -162,7 +162,57 @@
 							\item \begin{math} H_f(x_0) \end{math} ist indefinit \begin{math} \implies \end{math}  kein lokales Extremum
 						\end{enumerate}
 				\end{enumerate}
-	
+			
+			\subsubsection{Implizit definierte Funktionen}
+			
+				\begin{enumerate}[1.]
+					\item Satz über implizit definierte Funktionen
+						
+						\begin{math} D \subset \mathbb{R}^{n+p} \end{math}, \begin{math} f: D \to \mathbb{R}^p \end{math}, \begin{math} (x_0, y_0) \in D \end{math}
+						
+						Anforderungen:
+						\begin{enumerate}[-]
+							\item \begin{math} D \end{math} ist offen
+							\item \begin{math} f \end{math} ist stetig Differenzierbar
+							\item \begin{math} f(x_0, y_0) = 0 \end{math}
+							\item \begin{math} \frac{\delta f}{\delta y}(x_0, y_0) \end{math} ist invertierbar (\begin{math} \det \frac{\delta f}{\delta y}(x_0, y_0) \ne 0 \end{math})
+						\end{enumerate}
+						
+						Aus dem Satz folgt:
+						\begin{enumerate}[-]
+							\item Es existiert eine offene Umgebung \begin{math} U \subset \mathbb{R}^n \end{math} von \begin{math} x_0 \end{math}
+							\item Es existiert eine offene Umgebung \begin{math} V \subset \mathbb{R}^p \end{math} von \begin{math} y_0 \end{math}
+							\item Es existiert genau ein Funktion \begin{math} g: U \to V \end{math}, für welche gilt:
+								\begin{enumerate}[-]
+									\item \begin{math} g(x_0) = y_0, \forall x \in U : f(x, g(x)) = 0 \end{math}
+									\item \begin{math} \forall x \in U, \forall y \in V : f(x,y) = 0 \implies y = g(x) \end{math}
+									\item \begin{math} g \end{math} ist auf \begin{math} U \end{math} stetig Differenzierbar
+									\item \begin{math} \frac{\delta f}{\delta y}(x, g(x)) \end{math} ist invertierbar \begin{math} \forall x \in U \end{math}
+									\item \begin{math} \forall x \in U : g'(x) = -(\frac{\delta f}{\delta y}(x, g(x)))^{-1} \cdot \frac{\delta f}{\delta x}(x, g(x)) \end{math}
+								\end{enumerate}
+						\end{enumerate}
+					\item Lokaler Umkehrsatz
+					
+						\begin{math} D \subset \mathbb{R}^n \end{math}, \begin{math} f: D \to \mathbb{R}^n \end{math}, \begin{math} x_0 \in D \end{math}
+						
+						Anforderungen:
+						\begin{enumerate}[-]
+							\item \begin{math} D \end{math} ist offen
+							\item \begin{math} f \end{math} ist stetig Differenzierbar
+							\item \begin{math} f'(x_0) \end{math} ist invertierbar (\begin{math} \det f'(x_0) \ne 0 \end{math})
+						\end{enumerate}
+						
+						Aus dem Satz folgt:
+						\begin{enumerate}[-]
+							\item Es existiert eine offene Umgebung \begin{math} U(x_0) \end{math}
+							\item \begin{math} f(U) \end{math} ist offen
+							\item \begin{math} f|_U \end{math} ist injektiv
+							\item \begin{math} \forall x \in U : f'(x) \end{math} ist invertierbar
+							\item \begin{math} (f|_U)^{-1}: f(U) \to U \end{math} ist stetig differenzierbar
+							\item \begin{math} ((f|_U)^{-1})'(y) = [f'((f|_U)^{-1} (y))]^{-1} \forall y \in f(U) \end{math}
+						\end{enumerate}
+				\end{enumerate}
+			
 		\subsection{Integration}
 		
 			\subsubsection{Substitution}
