@@ -366,7 +366,65 @@
 					\item Die spezielle Lösung der inhomogenen Gleichung erhält man durch Variation der Konstanten.
 				\end{enumerate}
 				
-			
+			\subsubsection{Lineare Differentialgleichungssysteme}
+				
+				\begin{displaymath}
+					y' = Ay
+				\end{displaymath}
+				
+				\begin{enumerate}[1.]
+					\item Nullstelen des charakteristischen Polynoms \begin{math} \det(A-\lambda I) \end{math} bestimmen
+						
+						\begin{math}
+							p(\lambda) = (-1)^n (\lambda - \lambda_1)^{k_1} \dots (\lambda - \lambda_r)^{k_r}
+						\end{math}
+						
+						Zu beachten:
+						
+						\begin{enumerate}[]
+							
+							\item \begin{math} \lambda_1, \dots, \lambda_m \in \mathbb{R}; \lambda_{m+1}, \dots, \lambda_r \in \mathbb{C} \setminus \mathbb{R} \end{math}
+							
+							\item \begin{math} \lambda_{m+1} = \mu_1, \dots, \lambda_{m+s} = \mu_s \end{math}
+							
+							\item \begin{math} \lambda_{m+s+1} = \overline{\mu_1}, \dots, \lambda_{m+2s} = \overline{\mu_s} \end{math}
+						
+						\end{enumerate}
+							
+					\item Bestimme für alle \begin{math} \lambda_1, \dots, \lambda_{m+s} \end{math} eine Basis von
+						
+						\begin{math}
+							Kern((A-\lambda_j I)^{k_j})
+						\end{math}
+					
+					\item Für jedes \begin{math} \lambda_j, (j = 1, \dots, m + s) \end{math} und jeden Basisvektor v von \begin{math} Kern((A-\lambda_j I)^{k_j}) \end{math} führe durch:
+					
+						\begin{enumerate}[a)]
+							\item Finde das größte \begin{math} m_j < k_j \end{math}, für welches gilt:
+								
+								\begin{math}
+									(A-\lambda_j I)^{m_j} v \ne 0
+								\end{math}
+								
+							\item Setze:
+							
+								\begin{math}
+									y(x) := e^{\lambda_j x}[v + x(A - \lambda_j I) v + \frac{x^2}{2}(A-\lambda_j I)^2 v + \dots + \frac{x^{m_j}}{m_j!}(A-\lambda_j I)^{m_j}v]
+								\end{math}
+							
+							\item \begin{math} j \in {1,\dots, m} \end{math}:
+							
+								\begin{math} y \end{math} ist Beitrag zum Fundamentalsystem
+								
+							\item \begin{math} j \in {m+1, \dots, m+s} \end{math}:
+							
+								\begin{math} Re(y) \end{math} und \begin{math} Im(y) \end{math} sind beide Beitrag zum Fundamentalsystem
+						\end{enumerate}
+					
+					\item Alle Reellen und komplexen Beiträge mit jeweils hinzu multiplizierten Konstanten \begin{math} c_j \end{math} bilden als Summe das Fundamentalsystem und damit die allgemeine Lösung der homogenen Gleichung.
+					
+					\item Die spezielle Lösung der homogenen Gleichung erhält man durch Variation der Konstanten.
+				\end{enumerate}
 				
 		\subsection{Fouriertransformation}
 			
